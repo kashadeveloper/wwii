@@ -1,0 +1,99 @@
+/* убери все комментарии перед отправкой */
+
+body {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  /* height: 9000px; */
+  font-family: "PT Sans", sans-serif;
+}
+
+a,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: blue
+}
+
+a:active /* :active означает когда ссылка нажата */ {
+  color: #000;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #c82138;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.logo img {
+  width: 54px;
+  height: 52px;
+}
+
+.nav header {
+  display: flex;
+  padding: 15px;
+  display: -webkit-flex;
+}
+
+.site-content {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.card {
+  max-height: 600px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .description {
+  width: 75%;
+}
+
+.card .description {
+  color: #959595;
+}
+
+div.img.no_image {
+  background-image: url(../assets/no-img.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 149px;
+  height: 200px;
+}
+
+div.arrow-up {
+  background-image: url(../assets/up-arrow-chevron.svg);
+}
+
+@media (max-width: 480px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card .img {
+    margin-top: 10px;
+  }
+}
