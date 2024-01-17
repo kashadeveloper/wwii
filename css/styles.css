@@ -1,5 +1,7 @@
 /* убери все комментарии перед отправкой */
 
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"); /* Import font */
+
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +14,7 @@ a,
 a:visited,
 a:focus {
   text-decoration: none;
-  color: blue
+  color: blue;
 }
 
 a:active /* :active означает когда ссылка нажата */ {
@@ -88,6 +90,61 @@ div.arrow-up {
   background-image: url(../assets/up-arrow-chevron.svg);
 }
 
+/*  */
+
+.hero_description--content {
+  width: 100%;
+  max-width: 667px;
+}
+
+.hero_description--list {
+  font-size: 0;
+}
+
+.hero_description--list > dt {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+  padding: 0 3% 0 0;
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hero_description--list > dd {
+  width: 67%;
+  display: inline-block;
+  margin: 0 0 8px;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+.reward {
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  padding: 33px 10px;
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.rewards {
+  display: grid;
+  flex-direction: row;
+  grid-template: auto auto auto / auto auto auto;
+  /* grid-gap: 20px; */
+  /* grid-column: auto; */
+  gap: 20px;
+  padding: 10px;
+}
+
 @media (max-width: 480px) {
   .card {
     display: flex;
@@ -95,5 +152,36 @@ div.arrow-up {
   }
   .card .img {
     margin-top: 10px;
+  }
+
+  .hero_description-element {
+    margin-left: 0 !important;
+    display: block !important;
+  }
+
+  .hero_description--list > dd {
+    display: block;
+  }
+
+  .rewards > .reward {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .rewards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #hero_more_detail {
+    margin-top: 0;
   }
 }
